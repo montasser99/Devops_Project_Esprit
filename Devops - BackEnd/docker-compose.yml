@@ -1,0 +1,48 @@
+version: '3.8'
+services:
+  spring:
+    image: jemaiahmed/spring
+    ports:
+      - "8050:8050"
+    environment:
+      - NEXUS_URL=http://192.168.33.10:8081/
+      - NEXUS_REPOSITORY=AhmedRepo
+      - NEXUS_USERNAME=admin
+      - NEXUS_PASSWORD=nexus
+      - ARTIFACT_PATH=tn/esprit/DevOps_Project/1.0-SNAPSHOT/DevOps_Project-1.0-20240413.161820-3.jar
+      - SPRING_DATASOURCE_URL=jdbc:mysql://dbmysql:3306/brogramDB?createDatabaseIfNotExist=true&userSSL=false
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=root
+    depends_on:
+      - dbmysql
+
+  dbmysql:
+    image: "mysql:5.6"
+    container_name: my-dbmysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    ports:
+      - "3308:3306"
+    restart: unless-stopped
+    volumes:
+      - db:/var/lib/mysql
+
+  prometheus:
+    image: prom/prometheus
+    ports:
+      - "9091:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+
+  grafana:
+    image: grafana/grafana
+    ports:
+      - "3001:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=grafana
+    volumes:
+      - grafana_data:/var/lib/grafana
+
+volumes:
+  grafana_data:
+  db:

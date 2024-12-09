@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .container {
+            max-width: 500px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <h2 class="mb-4">Ajouter un nouvel operator</h2>
+        <form #etudiantForm="ngForm" (ngSubmit)="addEtudiant(etudiantForm)" class="needs-validation" novalidate>
+            <div class="form-group">
+                <label for="fname">Nom <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="fname" name="fname" ngModel required
+                    placeholder="Entrez le nom de l'étudiant">
+            </div>
+            <div class="form-group">
+                <label for="lname">Prénom <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="lname" name="lname" ngModel required
+                    placeholder="Entrez le prénom de l'étudiant">
+            </div>
+            <div class="form-group">
+                <label for="password">Mot de passe <span class="text-danger">*</span></label>
+                <input type="password" class="form-control" id="password" name="password" ngModel required
+                    placeholder="Entrez un mot de passe sécurisé">
+            </div>
+            <button type="submit" class="btn btn-primary">Ajouter</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

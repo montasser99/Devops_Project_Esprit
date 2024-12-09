@@ -1,0 +1,53 @@
+/* Conteneur principal */
+.container {
+  padding: 20px;
+}
+
+/* Titre du formulaire */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Texte pour les champs obligatoires */
+.text-danger {
+  color: red;
+}
+
+/* Espacement entre les groupes de formulaire */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Style des libellés des champs */
+label {
+  font-size: 1.1rem;
+}
+
+/* Largeur minimale des champs de saisie */
+input {
+  min-width: 200px;
+}
+
+/* Style des champs de saisie en focus */
+input:focus {
+  border-color: #80bdff;
+  background-color: #e7f4fe;
+}
+
+/* Style des boutons au survol */
+button:hover {
+  background-color: #0069d9;
+}
+
+/* Style du bouton Ajouter */
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Style des boutons désactivés */
+.btn:disabled {
+  background-color: #dcdcdc;
+  color: #6c757d;
+}

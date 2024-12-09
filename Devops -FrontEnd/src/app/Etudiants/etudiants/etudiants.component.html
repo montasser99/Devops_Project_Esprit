@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .container {
+            max-width: 800px;
+        }
+
+        .card {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+  <div class="container mt-5">
+    <div class="card shadow">
+      <div class="card-header bg-primary text-white"> <!-- Couleur personnalisée pour le header -->
+        <h1 class="card-title mb-0">Liste des Operators</h1>
+      </div>
+      <div class="card-body m-3">
+        <button class="btn btn-success mb-2" [routerLink]="['/ajouter']">Ajouter Operator</button> <!-- Couleur personnalisée pour le bouton -->
+        <table class="table table-striped">
+          <thead class="bg-light">
+            <tr>
+              <th scope="col">fname</th>
+              <th scope="col">lname</th>
+              <th scope="col">password</th>
+    
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <ng-container *ngIf="etudiants && etudiants.length > 0; else noData">
+              <tr *ngFor="let etudiant of etudiants">
+                <td>{{ etudiant.fname }}</td>
+                <td>{{ etudiant.lname }}</td>
+                <td>{{ etudiant.password }}</td>
+            
+                <td>
+                  <button class="btn btn-danger btn-sm" (click)="deleteEtudiant(etudiant.idOperateur)"> <!-- Couleur personnalisée pour le bouton -->
+                    <span class="material-icons">delete</span> 
+                  </button>
+                </td>
+              </tr>
+            </ng-container>
+            <ng-template #noData>
+              <tr>
+                <td colspan="7" class="text-center">Aucune donnée disponible</td>
+              </tr>
+            </ng-template>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
+</body>
+
+</html>
