@@ -22,3 +22,9 @@ I am thrilled to share that my DevOps project has successfully navigated through
 
 ✔ Email Notification: Email notifications were configured to instantly inform about the success or failure of the Jenkins pipeline. !
 
+![image](https://github.com/user-attachments/assets/f9b505a0-340f-497a-8e25-f078e504c3ba)
+![image](https://github.com/user-attachments/assets/b1c03cd3-5a31-43ea-a6b0-e318bbd3b5b2)
+![image](https://github.com/user-attachments/assets/99c8ec50-dcf8-473d-a6d7-7f33d4a49cb5)
+![image](https://github.com/user-attachments/assets/3145c455-6f52-4678-ab5f-2d5b40aa8565)
+![image](https://github.com/user-attachments/assets/684c292a-668e-42b4-8baa-88ec0db85e6b)
+![image](https://github.com/user-attachments/assets/c9589219-4dee-4a89-9931-594dcfaafbe0)
